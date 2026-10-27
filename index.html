@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<title>مركز إطلالة</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="مركز إطلالة للدراسات والبحوث: منظومة رحلات للبحث والتعلم والذكاء الاصطناعي والأعمال والتصميم والاستشارات الأسرية والنفسية.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<svg class="gdefs" width="0" height="0" aria-hidden="true" focusable="false"><defs>
+  <linearGradient id="gFront" gradientUnits="userSpaceOnUse" x1="3" y1="2" x2="21" y2="22"><stop offset="0" class="gs1"/><stop offset="1" class="gs2"/></linearGradient>
+  <linearGradient id="gBack" gradientUnits="userSpaceOnUse" x1="2" y1="2" x2="22" y2="22"><stop offset="0" class="gb1"/><stop offset="1" class="gb2"/></linearGradient>
+</defs></svg>
+
+<canvas id="atmos" aria-hidden="true"></canvas>
+
+<header class="hdr">
+  <div class="wrap">
+    <button class="brand" data-route="home" aria-label="مركز إطلالة، الصفحة الرئيسية">
+      <span class="brand-mark"><img src="logo-mark.png" alt=""></span>
+      <span class="brand-txt"><strong>مركز إطلالة</strong><span>للدراسات والبحوث</span></span>
+    </button>
+    <nav class="nav" id="nav" aria-label="التنقل الرئيسي">
+      <button class="lnk" data-route="home">الرئيسية</button>
+      <button class="lnk" data-route="about">من نحن</button>
+      <button class="lnk" data-route="services">الوجهات</button>
+      <button class="lnk" data-route="compass">البوصلة الذكية</button>
+      <button class="lnk" data-route="book">احجز</button>
+      <button class="lnk" data-scroll="contact">تواصل معنا</button>
+    </nav>
+    <div class="hdr-end">
+      <button class="icon-btn" id="themeBtn" aria-label="تبديل المظهر"></button>
+      <button class="icon-btn menu-btn" id="menuBtn" aria-label="القائمة" aria-expanded="false" aria-controls="nav"></button>
+    </div>
+  </div>
+</header>
+
+<button class="exit-btn" id="exitBtn" type="button"></button>
+
+<main id="view" tabindex="-1"></main>
+
+<section class="contact" id="contact" aria-labelledby="ctH"></section>
+
+<footer class="ftr">
+  <div class="wrap">
+    <div><h2>مركز إطلالة للدراسات والبحوث</h2><p style="color:var(--fg-2);max-width:42ch">منظومة تجمع البحث العلمي والتعلّم والذكاء الاصطناعي والأعمال والتصميم، ومعها الإرشاد الأسري والنفسي.</p></div>
+    <div><h2>الوجهات</h2><ul id="fCats"></ul></div>
+    <div><h2>التواصل</h2><ul id="fContact"></ul></div>
+    <p class="fine">جميع الحقوق محفوظة © <span id="year"></span> لمركز إطلالة للدراسات والبحوث. المساعد الآلي يجيب من دليل الخدمات ولا يغني عن التواصل مع فريق المركز.</p>
+  </div>
+</footer>
+
+<button class="chat-fab" id="chatFab" aria-label="افتح المساعد" aria-expanded="false"></button>
+<section class="chat-panel" id="chatPanel" data-open="false" aria-label="المساعد الآلي">
+  <div class="chat-h"><div><strong>مساعد الإطلالة</strong><small>مساعد آلي يقرأ دليل خدمات المركز</small></div><button class="icon-btn" id="chatClose" aria-label="إغلاق"></button></div>
+  <div class="chat-b" id="chatBody" aria-live="polite"></div>
+  <div class="qr" id="chatQr"></div>
+  <form class="chat-f" id="chatForm"><label class="sr" for="chatIn">اكتب سؤالك</label><input class="inp" id="chatIn" placeholder="اكتب سؤالك…" autocomplete="off"><button class="icon-btn" id="chatSend" type="submit" aria-label="إرسال" style="background:var(--gold);color:var(--on-gold);border:0"></button></form>
+</section>
+<div class="toast" id="toast" role="status"></div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
